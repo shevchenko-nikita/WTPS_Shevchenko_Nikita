@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <h2>Додати викладача</h2>
+    <form action="/submit">
+      <label>Введіть повне ім'я:</label>
+      <input type="text" name="full-name" />
+      <br />
+      <br />
+
+      <label>Оберіть стать:</label>
+      <select name="gender">
+        <option value="male">чоловіча</option>
+        <option value="female">жіноча</option>
+      </select>
+      <br />
+      <br />
+
+      <label>Оберіть дату народження:</label>
+      <input type="date" name="birth" />
+      <br />
+      <br />
+
+      <label>Email:</label>
+      <input type="email" name="email" />
+      <br />
+      <br />
+
+      <label>Введіть номер телефону:</label>
+      <input type="tel" name="phone" />
+      <br />
+      <br />
+
+      <label>Оберіть бажаний колір фону:</label>
+      <input type="color" name="prefered-colour" />
+      <br />
+      <br />
+
+      <label>Введіть країну:</label>
+      <input type="text" name="country" />
+      <br />
+      <br />
+
+      <label>Введіть місто:</label>
+      <input type="text" name="city" />
+      <br />
+      <br />
+
+      <label>Коментарі:</label> <br />
+      <textarea cols="30" rows="10" name="comments"></textarea>
+      <br />
+      <br />
+
+      <input type="submit" value="Відправити" />
+    </form>
+  </body>
+</html>
