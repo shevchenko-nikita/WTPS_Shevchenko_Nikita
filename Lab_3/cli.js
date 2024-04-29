@@ -37,3 +37,7 @@ const filteredUsers = functions.filterUsers(
 /// Task - 4
 sorted_users = functions.sortUsers(formated, "age", "desc");
 // console.log(sorted_users);
+
+/// Task - 5
+searched_user = functions.findUser(formated, "Joe");
+// console.log(searched_user);

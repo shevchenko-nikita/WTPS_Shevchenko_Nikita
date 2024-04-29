@@ -155,4 +155,17 @@ function sortUsers(users, sortBy, sortOrder) {
     });
 }
 
-module.exports = { parseData, validate, filterUsers, sortUsers };
+/// Task - 5
+function findUser(users, searchParam) {
+    return (matchingUsers = users.filter((user) => {
+        return Object.values(user).some((value) => {
+            if (typeof value === "string") {
+                return value.toLowerCase().includes(searchParam.toLowerCase());
+            } else if (typeof value === "number") {
+                return value === searchParam;
+            }
+        });
+    }));
+}
+
+module.exports = { parseData, validate, filterUsers, sortUsers, findUser };
