@@ -138,4 +138,21 @@ function filterUsers(users, country, age, gender, favorite) {
     ));
 }
 
-module.exports = { parseData, validate, filterUsers };
+/// Task - 4
+function sortUsers(users, sortBy, sortOrder) {
+    return users.sort((lhs, rhs) => {
+        if (typeof lhs[sortBy] === "number") {
+            return sortOrder === "asc"
+                ? lhs[sortBy] - rhs[sortBy]
+                : rhs[sortBy] - lhs[sortBy];
+        } else if (typeof lhs[sortBy] === "string") {
+            return sortOrder === "asc"
+                ? lhs[sortBy].localeCompare(rhs[sortBy])
+                : rhs[sortBy].localeCompare(lhs[sortBy]);
+        } else {
+            return 0;
+        }
+    });
+}
+
+module.exports = { parseData, validate, filterUsers, sortUsers };

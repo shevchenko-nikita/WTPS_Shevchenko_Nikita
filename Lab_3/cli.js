@@ -32,4 +32,8 @@ const filteredUsers = functions.filterUsers(
     gender,
     favorite
 );
-console.log("Filtered Users:", filteredUsers);
+// console.log("Filtered Users:", filteredUsers);
+
+/// Task - 4
+sorted_users = functions.sortUsers(formated, "age", "desc");
+// console.log(sorted_users);
