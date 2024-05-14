@@ -1,0 +1,9 @@
+{
+    "type": "module",
+    "devDependencies": {
+        "json-server": "^1.0.0-alpha.23"
+    },
+    "scripts": {
+        "start:server": "json-server --watch db.json --port 3000"
+    }
+}
