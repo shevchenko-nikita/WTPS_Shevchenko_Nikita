@@ -180,6 +180,7 @@ export function showAddTeacherPopUp() {
             picture_thumbnail: "./images/60111.jpg",
             favorite: false,
             course: speciality,
+            coordinates: { latitude: "-42.1817", longitude: "-152.1685" },
             bg_color: backgroundColor,
             note: notes,
         };

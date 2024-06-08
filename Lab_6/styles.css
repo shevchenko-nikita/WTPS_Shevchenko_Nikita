@@ -914,6 +914,32 @@ th:hover .statistics-table-head-arrow {
     height: 530px;
 }
 
+.button-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.piechart-canvas {
+    margin-bottom: 25px;
+}
+
+.button-row button {
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    background-color: #f75c49;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-row button:hover {
+    opacity: 0.8;
+}
+
 /*----------------------------- Favorites -----------------------------*/
 .favorites-slider {
     position: relative;

@@ -14,29 +14,31 @@ export function createStatisticsTable(teachers) {
     buttonRow.className = "button-row";
 
     let byRegionBtn = document.createElement("button");
-    byRegionBtn.textContent = "By Region";
+    byRegionBtn.textContent = "Region";
     buttonRow.appendChild(byRegionBtn);
 
     let byAgeBtn = document.createElement("button");
-    byAgeBtn.textContent = "By Age";
+    byAgeBtn.textContent = "Age";
     buttonRow.appendChild(byAgeBtn);
 
     let byFavoriteBtn = document.createElement("button");
-    byFavoriteBtn.textContent = "By Favorite";
+    byFavoriteBtn.textContent = "Favorite";
     buttonRow.appendChild(byFavoriteBtn);
 
     let bySexBtn = document.createElement("button");
-    bySexBtn.textContent = "By Sex";
+    bySexBtn.textContent = "Sex";
     buttonRow.appendChild(bySexBtn);
 
-    piechartContainer.appendChild(buttonRow);
+    // piechartContainer.appendChild(buttonRow);
 
     let canvas = document.createElement("canvas");
     canvas.id = "myPieChart";
     canvas.className = "piechart-canvas";
     canvas.width = 100;
     canvas.height = 100;
+
     piechartContainer.appendChild(canvas);
+    piechartContainer.appendChild(buttonRow);
 
     var category = "Region";
     var myChart = new Chart(canvas, {

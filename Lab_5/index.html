@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Lab 5</title>
+
+        <script type="module" src="js/filterUsers.js"></script>
+        <script type="module" src="js/loadUsers.js"></script>
+        <script type="module" src="js/countryToRegion.js"></script>
+        <script type="module" src="js/createTeacherCard.js"></script>
+        <script type="module" src="js/loadAndDisplayTopTeachers.js"></script>
+        <script type="module" src="js/showTeacherInfo.js"></script>
+        <script type="module" src="js/showAddTeacherPopUp.js"></script>
+        <script type="module" src="js/updateTopTeachersGrid.js"></script>
+        <script type="module" src="js/loadAndDisplayStatistics.js"></script>
+        <script type="module" src="js/createStatisticsTable.js"></script>
+        <script type="module" src="js/searchAndShowTeacher.js"></script>
+        <script type="module" src="js/createSearchFieldAndButton.js"></script>
+        <script type="module" src="js/saveTeacherToDB.js"></script>
+        <script
+            type="module"
+            src="js/addOnClickToAddTeacherButtons.js"
+        ></script>
+        <script type="module" src="js/loadFavoriteSection.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <nav>
+                <div class="nav-upper">
+                    <a href="#" class="nav-home">Teachinder</a>
+
+                    <div
+                        class="header-search-block"
+                        id="header-search-block"
+                    ></div>
+                </div>
+
+                <div class="nav-lower">
+                    <div class="links">
+                        <a href="#teachers" class="lower-link">Teachers</a>
+                        <a href="#statistics" class="lower-link">Statistics</a>
+                        <a href="#favorites" class="lower-link">Favorites</a>
+                        <a href="#about" class="lower-link">About</a>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="lower-add modal-toggle"
+                        id="first-add-teacher-button"
+                    >
+                        Add teacher
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <section id="teachers" class="container section">
+                <h2 class="section-title-paddings">Top Teachers</h2>
+
+                <div class="teachers-filters">
+                    <div class="teacher-filter">
+                        <label for="age">Age</label>
+                        <select id="age" name="age">
+                            <option value="0-1000">all</option>
+                            <option value="18-31">18-31</option>
+                            <option value="32-45">32-45</option>
+                            <option value="46-58">46-58</option>
+                            <option value="59-71">59-71</option>
+                        </select>
+                    </div>
+
+                    <div class="teacher-filter">
+                        <label for="region">Region</label>
+                        <select id="region" name="region">
+                            <option value="all">all</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Africa">Africa</option>
+                            <option value="Australia">Australia</option>
+                            <option value="North America">North America</option>
+                            <option value="South America">South America</option>
+                        </select>
+                    </div>
+
+                    <div class="teacher-filter">
+                        <label for="sex">Sex</label>
+                        <select id="sex" name="sex">
+                            <option value="all">all</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="teacher-filter">
+                        <input type="checkbox" id="photo" name="photo" />
+                        <label for="photo">Only with photo</label>
+                    </div>
+
+                    <div class="teacher-filter">
+                        <input
+                            type="checkbox"
+                            id="favorites"
+                            name="favorites"
+                        />
+                        <label for="favorites">Only favorites</label>
+                    </div>
+                </div>
+
+                <div class="teachers-grid" id="teachers-grid"></div>
+            </section>
+
+            <section id="statistics" class="container section">
+                <h2 class="section-title-paddings">Statistics</h2>
+
+                <table id="table" class="statistics-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Specialty</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Nationality</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="statistics-table-body"></tbody>
+                </table>
+
+                <div
+                    class="teachers-table-pagination"
+                    id="teachers-table-pagination"
+                ></div>
+            </section>
+
+            <section id="section-favorites" class="container section"></section>
+
+            <section id="about" class="container section about-section">
+                <div class="about-text">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Nisi quisquam id fugiat reprehenderit deleniti
+                        autem expedita ea voluptatum aspernatur blanditiis,
+                        doloribus saepe pariatur provident facilis voluptates
+                        aperiam possimus! Error tempora cupiditate accusamus
+                        totam quam esse eos vero dolores numquam? Consequatur
+                        aut temporibus nisi accusantium vitae! Fuga cupiditate
+                        ipsam earum inventore.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <div class="nav-lower">
+            <div class="links">
+                <a href="#teachers" class="lower-link">Teachers</a>
+                <a href="#statistics" class="lower-link">Statistics</a>
+                <a href="#favorites" class="lower-link">Favorites</a>
+                <a href="#about" class="lower-link">About</a>
+            </div>
+
+            <button
+                type="button"
+                class="lower-add modal-toggle"
+                id="second-add-teacher-button"
+            >
+                Add teacher
+            </button>
+        </div>
+    </body>
+</html>

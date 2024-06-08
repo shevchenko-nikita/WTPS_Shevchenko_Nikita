@@ -2,6 +2,7 @@
 import { loadFavoriteSection } from "./loadFavoriteSection.js";
 import { teachers } from "./loadUsers.js";
 import { updateTopteachersGrid } from "./updateTopTeachersGrid.js";
+import dayjs from "dayjs";
 
 export function showPopUpWithTeacherInfo(teacher) {
     let popup = document.createElement("div");
@@ -68,6 +69,20 @@ export function showPopUpWithTeacherInfo(teacher) {
     let teacherPhone = document.createElement("p");
     teacherPhone.textContent = teacher.phone;
     article.appendChild(teacherPhone);
+
+    let teacherDaysToBirthDay = document.createElement("p");
+    teacherDaysToBirthDay.id = "daysToBirthday";
+
+    const currDate = dayjs();
+    const birthDayInThisYear = dayjs(teacher.b_day).year(currDate.year());
+    const nextBirthday =
+        birthDayInThisYear > currDate
+            ? birthDayInThisYear
+            : birthDayInThisYear.add(1, "year");
+    const daysToBirthday = nextBirthday.diff(currDate, "day"); // Обчислити різницю в днях
+    teacherDaysToBirthDay.textContent = `Days to birthday: ${daysToBirthday}`;
+
+    article.appendChild(teacherDaysToBirthDay);
 
     let button = document.createElement("button");
     button.textContent = "Favorite";
@@ -144,6 +159,15 @@ export function showPopUpWithTeacherInfo(teacher) {
             lng: parseFloat(teacher.coordinates.longitude),
             lat: parseFloat(teacher.coordinates.latitude),
         }).addTo(map);
+    }
+
+    function calculateDays() {
+        const birthdate = dayjs(document.getElementById("birthdate").value);
+        const nextBirthday = birthdate.add(1, "year");
+        const daysUntilNextBirthday = nextBirthday.diff(dayjs(), "day");
+        document.getElementById(
+            "result"
+        ).innerText = `До наступного дня народження залишилося ${daysUntilNextBirthday} днів`;
     }
 
     console.log(
